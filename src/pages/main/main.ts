@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {NgForm} from '@angular/forms';
-import { NgModule } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, Nav } from 'ionic-angular';
+
+
 /**
  * Generated class for the MainPage page.
  *
@@ -16,6 +16,8 @@ import { NgModule } from '@angular/core';
 })
 export class MainPage {
 
+  @ViewChild(Nav) nav: Nav;
+
   public callId: string = "";
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -26,7 +28,9 @@ export class MainPage {
   }
 
   public openNewCall = () => {
+   
     console.log("open new call");
+    this.navCtrl.setRoot("MapPage");
   };
 
   public checkExistsCall = (callId: string) => {
