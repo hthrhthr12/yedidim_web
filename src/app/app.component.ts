@@ -42,7 +42,8 @@ export class MyApp {
     { title: 'Settings', component: 'SettingsPage' },
     { title: 'Search', component: 'SearchPage' },
     { title: 'Map', component: 'MapPage' },
-    { title: 'Main', component: 'MainPage'}
+    { title: 'Main', component: 'MainPage'},
+    { title: 'selectProblems', component: 'selectProblemsPage'}
   ]
 
   constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config) {
