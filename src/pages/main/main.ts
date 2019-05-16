@@ -34,6 +34,6 @@ export class MainPage {
   };
 
   public checkExistsCall = (callId: string) => {
-     console.log("check for exists call" + callId) ;
+     ;
   };
 }
