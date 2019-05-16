@@ -7,7 +7,7 @@ import { ICallData } from '../../types/callData';
 @Injectable({
   providedIn: "root"
 })
-export class CallDataProvider {
+export class CallData {
   constructor(public api: Api) {
   }
 
