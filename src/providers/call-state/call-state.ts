@@ -3,17 +3,17 @@ import { Api } from '../api/api';
 import { callStateSucceed } from '../../mocks/data/callState';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
-import { CallState } from '../../types/callState';
+import { CallState as CallStateType } from '../../types/callState';
 
 @Injectable({
   providedIn: "root"
 })
-export class CallStateProvider {
+export class CallState {
 
   constructor(public api: Api) {
   }
 
-  public get(id: string): Observable<CallState> {
+  public get(id: string): Observable<CallStateType> {
     return of(callStateSucceed);
   }
 
