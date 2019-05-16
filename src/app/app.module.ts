@@ -13,6 +13,7 @@ import { Settings, User, Api } from '../providers';
 import { MyApp } from './app.component';
 import { CallStateProvider } from '../providers/call-state/call-state';
 import { CallDataProvider } from '../providers/call-data/call-data';
+import { Store } from '../state-management/store';
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
@@ -64,7 +65,8 @@ export function provideSettings(storage: Storage) {
     // Keep this to enable Ionic's runtime error handling during development
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     CallStateProvider,
-    CallDataProvider
+    CallDataProvider,
+    Store
   ]
 })
 export class AppModule { }
