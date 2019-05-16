@@ -1,4 +1,3 @@
-import 'rxjs/add/operator/toPromise';
 
 import { Injectable } from '@angular/core';
 
@@ -34,7 +33,7 @@ export class User {
    * the user entered on the form.
    */
   login(accountInfo: any) {
-    let seq = this.api.post('login', accountInfo).share();
+    let seq = this.api.post('login', accountInfo);
 
     seq.subscribe((res: any) => {
       // If the API returned a successful response, mark the user as logged in
@@ -54,7 +53,7 @@ export class User {
    * the user entered on the form.
    */
   signup(accountInfo: any) {
-    let seq = this.api.post('signup', accountInfo).share();
+    let seq = this.api.post('signup', accountInfo);
 
     seq.subscribe((res: any) => {
       // If the API returned a successful response, mark the user as logged in
