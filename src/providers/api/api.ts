@@ -4,7 +4,9 @@ import { Injectable } from '@angular/core';
 /**
  * Api is a generic REST Api handler. Set your API url first.
  */
-@Injectable()
+@Injectable({
+  providedIn: "root"
+})
 export class Api {
   url: string = 'https://example.com/api/v1';
 

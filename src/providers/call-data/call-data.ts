@@ -4,7 +4,9 @@ import { of } from 'rxjs/observable/of';
 import { Observable } from 'rxjs/Observable';
 import { ICallData } from '../../types/callData';
 
-@Injectable()
+@Injectable({
+  providedIn: "root"
+})
 export class CallDataProvider {
   constructor(public api: Api) {
   }

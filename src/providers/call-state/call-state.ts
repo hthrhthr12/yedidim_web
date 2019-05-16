@@ -5,7 +5,9 @@ import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { CallState } from '../../types/callState';
 
-@Injectable()
+@Injectable({
+  providedIn: "root"
+})
 export class CallStateProvider {
 
   constructor(public api: Api) {
