@@ -42,8 +42,7 @@ export class MyApp {
     { title: 'Settings', component: 'SettingsPage' },
     { title: 'Search', component: 'SearchPage' },
     { title: 'Map', component: 'MapPage' },
-    { title: 'Main', component: 'MainPage'},
-    { title: 'AppeallerDetails', component: 'AppeallerDetailsPage'}
+    { title: 'Main', component: 'MainPage'}
   ]
 
   constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config) {
